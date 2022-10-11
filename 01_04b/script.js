@@ -10,5 +10,6 @@ const targetSheet = styleSheetsArray.find((styleSheet) => {
 	}
 });
 // just show CSSrules in the DOM [number] indicating index number for the rule
-// .cssText gives me html output of the rule - aka an actual css rules
-console.log(targetSheet.cssRules[0].cssText);
+// .style gives you whole list of css properties for an element
+// but to specify which property you are trying to acess is more useful , e.g .transition gives me transition property only, rather it gives a value of the property
+console.log(targetSheet.cssRules[0].style.transition);
