@@ -15,3 +15,6 @@ console.log(targetSheet);
 // targetSheet.insertRule(".animals li a {border-color: green}");
 // to placev it below black border rule, add index position 1 as a paramether
 targetSheet.insertRule(".animals li a {border-color: green}", 1);
+
+// to delete an original rule with black border - index position 0
+targetSheet.deleteRule(0);
