@@ -22,3 +22,6 @@ const targetSheet = styleSheetsArray.find((styleSheet) => {
 });
 
 console.log(targetSheet);
+//  to disable extra.css
+// browser downloads the stylesheet and caches it but it is not applying because it is set to disabled:true in the DOM
+targetSheet.disabled = true;
