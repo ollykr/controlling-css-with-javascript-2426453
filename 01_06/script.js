@@ -23,15 +23,15 @@ const targetSheet = styleSheetsArray.find((styleSheet) => {
 			targetSheet.disabled = false;
 		}
 		targetSheet.disabled = true;
-		listButton.classList.add("current");
 		gridButton.classList.remove("current");
+		listButton.classList.add("current");
 	});
 	gridButton.addEventListener("click", () => {
 		if (!targetSheet) {
 			targetSheet.disabled = true;
 		}
-		gridButton.classList.add("current");
 		listButton.classList.remove("current");
+		gridButton.classList.add("current");
 
 		targetSheet.disabled = false;
 	});
