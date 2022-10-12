@@ -1,8 +1,14 @@
+// Morten's solution in lesson 1-07
+
+// My solution
+// grab all stylesheets in the document
 const styleSheets = document.styleSheets;
+// grab List View button
 const listButton = document.getElementById("list");
+// grab Grid View button
 const gridButton = document.getElementById("grid");
 
-listButton.classList.add("current");
+gridButton.classList.add("current");
 
 const styleSheetsArray = Array.from(styleSheets);
 const targetSheet = styleSheetsArray.find((styleSheet) => {
@@ -26,6 +32,7 @@ const targetSheet = styleSheetsArray.find((styleSheet) => {
 		}
 		gridButton.classList.add("current");
 		listButton.classList.remove("current");
+
 		targetSheet.disabled = false;
 	});
 });
