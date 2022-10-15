@@ -22,6 +22,8 @@ console.log(styleSheet.cssRules[2]);
 let typedHeadingOpacity = styleSheet.cssRules[2].styleMap.get("opacity").value;
 // print 0.7 in blue color (not black) - meaning it is a number, not a string
 console.log(typedHeadingOpacity);
+// print "number"
+console.log(typeof typedHeadingOpacity);
 typedHeadingOpacity = typedHeadingOpacity + 0.2;
 // print 0.8999999999999999 in blue color (not black) - meaning it is a number, not a string
 console.log(typedHeadingOpacity);
