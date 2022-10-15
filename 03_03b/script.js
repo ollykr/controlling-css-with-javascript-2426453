@@ -7,8 +7,10 @@ console.log(styleSheet.cssRules[2].style.getPropertyValue("max-inline-size"));
 // Set max-inline-size to 65rem instead of 70vw
 // Method 1 - JS-defined
 styleSheet.cssRules[2].style.maxInlineSize = "65rem";
-// print 65rem
-console.log(styleSheet.cssRules[2].style.getPropertyValue("max-inline-size"));
-// Method 2 - target CSS specific property name
-styleSheet.cssRules[2].style.setProperty("max-inline-size", "65rem");
-console.log(styleSheet.cssRules[2].style.getPropertyValue("max-inline-size"));
+// Get a value of non-existing property for a certain declaration
+// Print...nothing
+// console.log(styleSheet.cssRules[2].style.getPropertyValue("background-color"));
+// set a bg colour of .masthead declaration to skyblue
+styleSheet.cssRules[2].style.setProperty("background-color", "skyblue");
+// get skyblue as a value , print skyblue
+console.log(styleSheet.cssRules[2].style.getPropertyValue("background-color"));
