@@ -18,4 +18,11 @@ styleSheet.cssRules[2].styleMap.set(
 	"max-inline-size",
 	`${maxInlineValue * 2}${maxInlineUnit}`
 );
+// Print 140vw
 console.log(styleSheet.cssRules[2].style.maxInlineSize);
+
+// Set a new property for .masthead - a background-color to skyblue
+
+styleSheet.cssRules[2].styleMap.set("background-color", "skyblue");
+// Print skyblue
+console.log(styleSheet.cssRules[2].style.backgroundColor);
