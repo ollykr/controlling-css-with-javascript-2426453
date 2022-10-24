@@ -15,3 +15,8 @@ const styleSheet = document.styleSheets[0];
 // --bg - color: hsl(132, 100 %, 50 %);
 // --max-width: 70vw; --whitespace: 2rem;
 console.log(styleSheet.cssRules[0].style.cssText);
+
+// Set a new custom property
+styleSheet.cssRules[0].style.setProperty("--border-color", "hsl(53 100% 50%)");
+// Print --border-color:hsl(53 100% 50%);
+console.log(styleSheet.cssRules[0].style.cssText);
