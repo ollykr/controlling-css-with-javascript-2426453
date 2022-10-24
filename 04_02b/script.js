@@ -1,5 +1,11 @@
 const listItem = document.querySelector(".animals li:nth-child(6) a");
 // .cssText gives a verbose version of CSS declaration as it appears either inline or in a stylesheet
+
+console.log(listItem.style.cssText);
+// Change an existing custom property aka CSS var
+// Set a skyblue color as a custom property for a text
+listItem.style.setProperty("--color", "skyblue");
+// Print --color: skyblue;
 console.log(listItem.style.cssText);
 
 const styleSheet = document.styleSheets[0];
