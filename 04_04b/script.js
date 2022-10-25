@@ -18,3 +18,14 @@ window.CSS.registerProperty({
 	// we basically cycling through colors on transition , moving a color wheel
 	initialValue: "20",
 });
+
+// CSS Typed Object Model
+// Since we declared units in custom properties we should be able to query Typed Object Model propertiess -e.g use styleMap to get a value? Not so fast :)
+// We should be able to get a value - 4rem but the value is not Typed
+
+const styleSheet = document.styleSheets[0];
+// Print 4rem
+console.log(styleSheet.cssRules[4].style.getPropertyValue("--font-size"));
+
+console.log(styleSheet.cssRules[4].styleMap.get("--font-size").value);
+console.log(styleSheet.cssRules[4].styleMap.get("--font-size").unit);
